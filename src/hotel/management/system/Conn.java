@@ -1,15 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package hotel.management.system;
 
-/**
- *
- * @author Ajay
- */
-public class Conn {
+
+import java.sql.*;
+
+public class Conn  
+{
+Connection c;
+Statement s;
+public Conn()
+{
+try
+{
+
+   Class.forName("com.mysql.jdbc.Driver");
+   c= DriverManager.getConnection("jdbc:mysql:///hotelmanagementsystem","root","root");
+   s=c.createStatement();
 
 }
+catch(Exception e)
+{
+System.out.println(e.getMessage());
+}
+}
+public static void main(String[] args)
+{
+Conn c=new Conn();
+}
+}
+
+
+
+
