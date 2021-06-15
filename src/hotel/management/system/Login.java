@@ -51,9 +51,9 @@ setLocation(220,170);
 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 setVisible(true);
 }
-public void actionPerformed(ActionEvent e)
+public void actionPerformed(ActionEvent ae)
 {
-if(e.getSource()==b1){
+if(ae.getSource()==b1){
 String username=t1.getText();
 String password=p1.getText();
 Conn c=new Conn();
@@ -64,17 +64,18 @@ try
 ResultSet rs=c.s.executeQuery(str);
 if(rs.next()){
 new Login().setVisible(true);
+this.setVisible(false);
 }
 else{
 JOptionPane.showMessageDialog(null,"Invalid username and password");
 this.setVisible(false);
 }
 }
-catch(Exception a){
-System.out.println("error"+a.getMessage());
+catch(Exception e){
+System.out.println("error"+e.getMessage());
 }
 }
-else if(e.getSource()==b2){
+else if(ae.getSource()==b2){
 System.exit(0);
 }
 }

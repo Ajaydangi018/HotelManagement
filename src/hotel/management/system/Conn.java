@@ -15,7 +15,7 @@ try
 {
 
    Class.forName("com.mysql.jdbc.Driver");
-   c= DriverManager.getConnection("jdbc:mysql:///hotelmanagementsystem","root","root");
+   c= DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelmanagementsystem","root","root");
    s=c.createStatement();
 
 }
