@@ -39,16 +39,17 @@ b2.setForeground(Color.WHITE);
 b2.setBounds(200,150,100,20);
 b2.addActionListener(this);
 add(b2);
-//i1=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/in.jpg"));
-//i2=i1.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
-//i3=new ImageIcon(i2);
-//l3=new JLabel("IMAGE");
-//l3.setBounds(350,10,200,200);
-//add(l3);
+i1=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/in.jpg"));
+i2=i1.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
+i3=new ImageIcon(i2);
+l3=new JLabel(i3);
+l3.setBounds(350,10,200,200);
+add(l3);
 setLayout(null);
-setSize(380,300);
+setSize(550,300);
 setLocation(220,170);
 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+getContentPane().setBackground(Color.WHITE);
 setVisible(true);
 }
 public void actionPerformed(ActionEvent ae)
@@ -63,7 +64,7 @@ try
 {
 ResultSet rs=c.s.executeQuery(str);
 if(rs.next()){
-new Login().setVisible(true);
+new Dashboard().setVisible(true);
 this.setVisible(false);
 }
 else{
