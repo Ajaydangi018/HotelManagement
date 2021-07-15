@@ -110,13 +110,14 @@ b1.setBackground(Color.BLACK);
 b1.addActionListener(this);
 add(b1);
 
-//i1=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/third.jpg"));
-//l1=new JLabel(i1);
-//add(l1);
+i1=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/third.jpg"));
+l1=new JLabel(i1);
+l1.setBounds(400,50,400,500);
+add(l1);
 
 
 setLayout(null);
-setSize(600,600);
+setSize(1000,600);
 setLocation(300,100);
 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 setVisible(true);

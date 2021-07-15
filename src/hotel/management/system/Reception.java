@@ -112,9 +112,10 @@ b12.addActionListener(this);
 add(b12);
 
 
-//ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/fourth.jpg"));
-//l1=new JLabel(i1);
-//l1.setBounds(250,30,500,470);
+ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/fourth.jpg"));
+l1=new JLabel(i1);
+l1.setBounds(250,30,500,470);
+add(l1);
 
 getContentPane().setBackground(Color.WHITE);
 
@@ -124,8 +125,11 @@ setLayout(null);
 setVisible(true);
 }
 public void actionPerformed(ActionEvent ae){
-if(ae.getSource()==b1){}
+if(ae.getSource()==b1){new AddCustomer().setVisible(true);
+this.setVisible(false);}
 else if(ae.getSource()==b2){
+new Room().setVisible(true);
+this.setVisible(false);
 }
 else if(ae.getSource()==b3){
 }
@@ -133,16 +137,32 @@ else if(ae.getSource()==b4){
 new EmployeeInfo().setVisible(true);
 this.setVisible(false);
 }
-else if(ae.getSource()==b5){}
+else if(ae.getSource()==b5){new CustomerInfo().setVisible(true);
+this.setVisible(false);}
 else if(ae.getSource()==b6){
 new ManagerInfo().setVisible(true);
 this.setVisible(false);
 }
-else if(ae.getSource()==b7){}
-else if(ae.getSource()==b8){}
-else if(ae.getSource()==b9){}
-else if(ae.getSource()==b10){}
-else if(ae.getSource()==b11){}
+else if(ae.getSource()==b7){
+new CheckOut().setVisible(true);
+this.setVisible(false);
+}
+else if(ae.getSource()==b8){
+new UpdateCheck().setVisible(true);
+this.setVisible(false);
+}
+else if(ae.getSource()==b9){
+new UpdateRoom().setVisible(true);
+this.setVisible(false);
+}
+else if(ae.getSource()==b10){
+new PickUp().setVisible(true);
+this.setVisible(false);
+}
+else if(ae.getSource()==b11){
+new SearchRoom().setVisible(true);
+this.setVisible(false);
+}
 else if(ae.getSource()==b12){
 setVisible(false);
 }

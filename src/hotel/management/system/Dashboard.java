@@ -39,10 +39,10 @@ t4=new JMenuItem("ADD DRIVERS");
 t4.addActionListener(this);
 m2.add(t4);
 
- //I1=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/third.jpg"));
- //l1=new JLabel(I1);
-//l1.setBounds(0,40,1000,600);
-//add(l1);
+ I1=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/third.jpg"));
+ l1=new JLabel(I1);
+l1.setBounds(0,40,1000,600);
+add(l1);
 
 setLayout(null);
 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
